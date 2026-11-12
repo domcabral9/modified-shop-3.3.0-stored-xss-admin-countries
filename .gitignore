@@ -1,0 +1,7 @@
+# Never commit traffic captures or credentials (they contain session cookies)
+*.har
+*.saz
+*cookie*
+*credential*
+*.pcap
+*.pcapng
