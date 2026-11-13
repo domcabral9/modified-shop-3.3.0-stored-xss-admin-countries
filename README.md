@@ -401,7 +401,7 @@ WHERE countries_name REGEXP '[<>]';
 |---|---|
 | 2026-11-10 | Vulnerability identified by static analysis (RedScan Research Team) |
 | 2026-11-10 | Dynamic validation performed in a lab environment |
-| {YYYY-MM-DD} | Vendor notified |
+| 2026-11-12 | Vendor notified by email (info@modified-shop.org, per the vendor security policy) |
 | {YYYY-MM-DD} | Vendor acknowledged |
 | 2026-11-12 | CVE requested via VulDB (submission #1093810) |
 | {YYYY-MM-DD} | Fix released |
@@ -412,9 +412,9 @@ WHERE countries_name REGEXP '[<>]';
 ## 14. Vendor Communication
 
 - **Vendor:** Modified eCommerce Shopsoftware (https://www.modified-shop.org/)
-- **Channel:** {CHANNEL}
-- **First notification:** {YYYY-MM-DD}
-- **Response status:** {Responded / No response / Under review}
+- **Channel:** email to info@modified-shop.org, as required by the vendor security policy (https://github.com/modified-shop/modified-shop/security/policy)
+- **First notification:** 2026-11-12
+- **Response status:** Awaiting response
 - **Vendor position:** {SUMMARY}
 - **Fixed version:** {FIXED_VERSION}
 
@@ -472,7 +472,7 @@ WHERE countries_name REGEXP '[<>]';
 | 1.1 | 2026-11-10 | Aligned with the official RedScan Research Team advisory (static analysis) |
 | 1.2 | 2026-11-11 | Advisory consolidated into this single English README (separate EN and PT-BR files removed) |
 | 1.3 | 2026-11-12 | Lab address redacted in evidence 6; evidence 1 replaced by the form submission that produced evidence 2 |
-| 1.4 | 2026-11-12 | Preliminary CVSS 3.1 vector added; status updated (unpatched in `main`); VulDB submission referenced |
+| 1.4 | 2026-11-12 | Preliminary CVSS 3.1 vector added; status updated (unpatched in `main`); VulDB submission referenced; vendor notified by email |
 
 ---
 
