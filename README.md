@@ -18,8 +18,8 @@ via the `countries_name` parameter.
 | **Affected version** | 3.3.0 (r16825) |
 | **Component** | `admin/countries.php`, parameter `countries_name` |
 | **CWE** | CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') |
-| **Suggested severity** | Medium |
-| **Status** | {Unpatched / Under investigation} |
+| **Suggested severity** | Medium (preliminary CVSS 3.1: 4.8, see section 10) |
+| **Status** | Unpatched (still present in the `main` branch as of 2026-11-12); CVE requested via VulDB |
 | **Published** | {YYYY-MM-DD} |
 | **Last updated** | {YYYY-MM-DD} |
 
@@ -351,6 +351,11 @@ Loading `admin/countries.php` after the redirect renders the stored value as liv
 
 - **Suggested severity:** Medium
 
+### CVSS
+
+- **CVSS:** {VECTOR_AND_SCORE to be confirmed}
+- **Preliminary estimate:** `CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N` (4.8, Medium). `PR:H` because storing the payload requires an admin session; `UI:R` because another administrator must open the countries page; `S:C` because the impact lands in the victim's browser; `C:L/I:L` reflect reading page content and performing actions as the victim. The final calculation will be confirmed with the RedScan Research Team.
+
 ### CWE
 
 - **CWE-79:** Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
@@ -398,7 +403,7 @@ WHERE countries_name REGEXP '[<>]';
 | 2026-11-10 | Dynamic validation performed in a lab environment |
 | {YYYY-MM-DD} | Vendor notified |
 | {YYYY-MM-DD} | Vendor acknowledged |
-| {YYYY-MM-DD} | CVE requested / reserved |
+| 2026-11-12 | CVE requested via VulDB (submission #1093810) |
 | {YYYY-MM-DD} | Fix released |
 | {YYYY-MM-DD} | Advisory published |
 
@@ -454,7 +459,8 @@ WHERE countries_name REGEXP '[<>]';
 - https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
 - {CVE_RECORD_URL}
 - {NVD_URL}
-- {VULDB_URL}
+- https://vuldb.com/submit/1093810 (VulDB submission)
+- {VULDB_ENTRY_URL}
 
 ---
 
@@ -466,6 +472,7 @@ WHERE countries_name REGEXP '[<>]';
 | 1.1 | 2026-11-10 | Aligned with the official RedScan Research Team advisory (static analysis) |
 | 1.2 | 2026-11-11 | Advisory consolidated into this single English README (separate EN and PT-BR files removed) |
 | 1.3 | 2026-11-12 | Lab address redacted in evidence 6; evidence 1 replaced by the form submission that produced evidence 2 |
+| 1.4 | 2026-11-12 | Preliminary CVSS 3.1 vector added; status updated (unpatched in `main`); VulDB submission referenced |
 
 ---
 
