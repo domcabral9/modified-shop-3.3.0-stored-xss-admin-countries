@@ -1,6 +1,6 @@
 <div align="center">
 
-# Stored XSS in Modified eCommerce Shopsoftware 3.3.0 via `admin/countries.php`
+# Stored XSS in modified eCommerce Shopsoftware 3.3.0 via `admin/countries.php`
 
 <a href="https://github.com/carlosalbertotuma/RedScan_Research_Team"><img src="https://img.shields.io/badge/RedScan-Research%20Team-B22222?style=for-the-badge" alt="RedScan Research Team"></a>
 <img src="https://img.shields.io/badge/CWE--79-Stored%20XSS-orange?style=for-the-badge" alt="CWE-79 Stored XSS">
@@ -15,6 +15,8 @@ via the `countries_name` parameter.
 | | |
 |---|---|
 | **CVE** | {CVE-YYYY-NNNNN} |
+| **Vendor** | modified ([modified-shop.org](https://www.modified-shop.org/)) |
+| **Product** | modified eCommerce Shopsoftware, open-source PHP e-commerce platform ([modified-shop/modified-shop](https://github.com/modified-shop/modified-shop)) |
 | **Affected version** | 3.3.0 (r16825) |
 | **Component** | `admin/countries.php`, parameter `countries_name` |
 | **CWE** | CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') |
@@ -27,7 +29,8 @@ via the `countries_name` parameter.
 
 ## 1. Identification
 
-- **Product:** Modified eCommerce Shopsoftware ([modified-shop/modified-shop](https://github.com/modified-shop/modified-shop))
+- **Vendor:** modified ([modified-shop.org](https://www.modified-shop.org/))
+- **Product:** modified eCommerce Shopsoftware, open-source PHP e-commerce platform ([modified-shop/modified-shop](https://github.com/modified-shop/modified-shop))
 - **Version analyzed:** 3.3.0, revision 16825 (commit `c531afbf7279f6e60ca7cda09f2c9d7ca5305c46`)
 - **Endpoint:** `admin/countries.php`
 - **Functional parameter:** `countries_name`
@@ -324,7 +327,7 @@ Loading `admin/countries.php` after the redirect renders the stored value as liv
 
 ### 9.5. Reproduction steps
 
-1. Install Modified eCommerce Shopsoftware **3.3.0** (revision 16825) with default settings.
+1. Install modified eCommerce Shopsoftware **3.3.0** (revision 16825) with default settings.
 2. Log in to the administration area with an account that can access **Zones/Tax → Countries**.
 3. Open `/admin/countries.php` and click **New Country** (or edit an existing country).
 4. Fill in:
@@ -411,7 +414,8 @@ WHERE countries_name REGEXP '[<>]';
 
 ## 14. Vendor Communication
 
-- **Vendor:** Modified eCommerce Shopsoftware (https://www.modified-shop.org/)
+- **Vendor:** modified ([modified-shop.org](https://www.modified-shop.org/))
+- **Product:** modified eCommerce Shopsoftware
 - **Channel:** email to info@modified-shop.org, as required by the vendor security policy (https://github.com/modified-shop/modified-shop/security/policy)
 - **First notification:** 2026-11-12
 - **Response status:** Awaiting response
@@ -473,6 +477,7 @@ WHERE countries_name REGEXP '[<>]';
 | 1.2 | 2026-11-11 | Advisory consolidated into this single English README (separate EN and PT-BR files removed) |
 | 1.3 | 2026-11-12 | Lab address redacted in evidence 6; evidence 1 replaced by the form submission that produced evidence 2 |
 | 1.4 | 2026-11-12 | Preliminary CVSS 3.1 vector added; status updated (unpatched in `main`); VulDB submission referenced; vendor notified by email |
+| 1.5 | 2026-11-13 | Vendor (modified) and product (modified eCommerce Shopsoftware) stated separately in the summary, identification and vendor communication sections, matching the VulDB submission; official lowercase spelling of the product name |
 
 ---
 
