@@ -478,7 +478,7 @@ WHERE countries_name REGEXP '[<>]';
 | 1.3 | 2026-11-12 | Lab address redacted in evidence 6; evidence 1 replaced by the form submission that produced evidence 2 |
 | 1.4 | 2026-11-12 | Preliminary CVSS 3.1 vector added; status updated (unpatched in `main`); VulDB submission referenced; vendor notified by email |
 | 1.5 | 2026-11-13 | Vendor (modified) and product (modified eCommerce Shopsoftware) stated separately in the summary, identification and vendor communication sections, matching the VulDB submission; official lowercase spelling of the product name |
-| 1.6 | 2026-11-18 | Credits: Smith Braz listed by his handle (5MITH) |
+| 1.6 | 2026-11-18 | Credits: Smith Braz listed by handle (5MITH) |
 
 ---
 
